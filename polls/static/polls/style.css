@@ -1,0 +1,12 @@
+html{
+}
+
+body{
+    background:  url("images/background.gif") no-repeat;
+    background-size: 100%;
+}
+
+li a {
+    color : green;
+
+}

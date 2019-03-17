@@ -1,0 +1,23 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+
+<body>
+    <a href="/admin/" >Admin</a>
+
+
+    {% if latest %}
+        <ol style = "color: red; background: ; text-align: center">
+        {% for question in latest %}
+            <li>
+                <a href="{% url 'polls:detail' question.id %}">{{ question.ques_text }}</a>
+            </li>
+        {% endfor %}
+        </ol>
+
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    <script>console.log('Hello'); </script>
+</body>
